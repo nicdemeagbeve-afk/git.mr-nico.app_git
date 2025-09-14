@@ -11,6 +11,8 @@ git remote add origin SSH_REPO
 ## Creer une branch develop 
 ```bash
 git chekout -b NOM_BRANCHE
+gt add .
+git commit -m "Pull request"
 ```
 ## Crer du texte 
 
