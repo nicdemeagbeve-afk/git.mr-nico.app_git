@@ -19,3 +19,6 @@ git commit -m "TITRE DU COMMENTAIRE"
 
 connase va te faire foutre
 enculée va te aire nicker par ta daronne
+
+hbyivgxryxvyipgbxeuutcobugbgvôubo
+pour les bonne pratique ont va ajouter les branche commit et pull request
