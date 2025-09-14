@@ -16,8 +16,10 @@ git commit -m "Pull request"
 ```
 ## Crer du texte 
 
-connase va te faire foutre
-enculée va te aire nicker par ta daronne
+```
+## Créer du texte
+
+Écrivez ici votre texte d’exemple ou vos instructions.
 
 hbyivgxryxvyipgbxeuutcobugbgvôubo
 pour les bonne pratique ont va ajouter les branche commit et pull request
