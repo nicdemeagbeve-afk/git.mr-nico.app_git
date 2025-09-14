@@ -15,10 +15,9 @@ git add .
 git commit -m "TITRE DU COMMENTAIRE"
 
 ```
-## Crer du texte 
+## Créer du texte
 
-connase va te faire foutre
-enculée va te aire nicker par ta daronne
+Écrivez ici votre texte d’exemple ou vos instructions.
 
 hbyivgxryxvyipgbxeuutcobugbgvôubo
 pour les bonne pratique ont va ajouter les branche commit et pull request
