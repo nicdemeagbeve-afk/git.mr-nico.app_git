@@ -12,3 +12,7 @@ git remote add origin SSH_REPO
 ```bash
 git chekout -b NOM_BRANCHE
 ```
+## Crer du texte 
+
+connase va te faire foutre
+enculée va te aire nicker par ta daronne
