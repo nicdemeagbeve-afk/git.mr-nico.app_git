@@ -21,3 +21,7 @@ git commit -m "TITRE DU COMMENTAIRE"
 
 hbyivgxryxvyipgbxeuutcobugbgvôubo
 pour les bonne pratique ont va ajouter les branche commit et pull request
+
+## Création de la structure de mon portfolio
+
+Initialisation et structure compléte du html et ajout du favicon
