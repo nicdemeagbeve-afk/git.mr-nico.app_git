@@ -25,3 +25,6 @@ pour les bonne pratique ont va ajouter les branche commit et pull request
 ## Création de la structure de mon portfolio
 
 Initialisation et structure compléte du html et ajout du favicon
+## Style du site 
+
+Ajout de couleur gold + disposition du site
