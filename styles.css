@@ -1,18 +1,20 @@
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: #666161 0px 0px 10px;
-    background-color: #9bb1ce;
-    border-radius: 10px;
-    margin: 45px;
+/* styles.css */
+html {
+  scroll-behavior: smooth;
 }
 body{
-    font-family: Arial, sans-serif;
+     font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #031f47; 
     color: #ffffff;
+}
+section {
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 header{
     background-color: #333;
@@ -35,8 +37,10 @@ nav ul{
 }
 header ul li{
     display: inline;
-    margin: 0px 25px 0px 25px;
-    padding: 15px 20px 10px 50px; 
+  /*  margin: 0px 25px 0px 25px;
+    padding: 15px 20px 10px 50px; */
+    margin: 0px 15px 0px 15px;
+    padding: 10px 10px;
     border-left: #ffffff solid 1px;
     border-right: #ffffff solid 1px;
     border-radius: 5px;
@@ -83,4 +87,79 @@ h2{
     border-bottom: 2px solid #0a4fe2;
     padding-bottom: 5px;
     text-align: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 20px;
+    box-shadow: #666161 0px 0px 10px;
+    background-color: #9bb1ce;
+    border-radius: 10px;
+}
+.about{
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.profile-pic{
+    border-radius: 50%;
+    border: 5px solid #0a4fe2;
+}
+.intro-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-content h2{
+    margin-top: 15px;
+}
+.intro-content p{
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 600px;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project{
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.project h3{
+    margin-top: 0;
+}
+.project p{
+    font-size: 1em;
+}
+.project a{
+    color: #0a4fe2;
+    text-decoration: none;
+}
+.project a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 1200px) { .intro-content img { width: 400px; height: auto; } }
+@media (max-width: 768px) { .intro-content img { width: 250px; height: auto; } }
+@media (max-width: 480px) { .intro-content img { width: 150px; height: auto; } }
+/* Animation for sections */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 600px) {
+  header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header ul li {
+    display: block;
+    margin: 5px 0;
+    border: none;
+  }
 }
