@@ -1,77 +1,86 @@
-body
-{
-    background-color: rgb(32, 159, 218);
-    color: white;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: #666161 0px 0px 10px;
+    background-color: #9bb1ce;
+    border-radius: 10px;
+    margin: 45px;
+}
+body{
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    background-color: #031f47; 
+    color: #ffffff;
 }
-header {
-    background-color: darkorange;
-    padding: 20px;
+header{
+    background-color: #333;
+    color: white;
+    padding: 9.5px 0;
+    margin: 10px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 7.5px;
 }
-nav ul {
+h1{
+    margin: 0;
+}
+nav ul{
     list-style-type: none;
     padding: 0;
+  
 }
-nav ul li {
+header ul li{
     display: inline;
-    margin: 0 15px;
+    margin: 0px 25px 0px 25px;
+    padding: 15px 20px 10px 50px; 
+    border-left: #ffffff solid 1px;
+    border-right: #ffffff solid 1px;
+    border-radius: 5px;
+
 }
-nav ul li a {
+header ul :hover{
+    background-color: #0a1fdb;
+}
+nav ul li a{
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
-nav ul li a:hover {
-    text-decoration: underline;
-}
-main {
+section{
     padding: 20px;
 }
-h1, h2, h3 {
-    color: rgb(1, 245, 123);
-}
-footer {    
-    background-color: darkorange;
+footer{
+    background-color: #333;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px;
+    padding: 5px 0;
     position: relative;
     width: 100%;
     bottom: 0;
-}
-footer p {
-    margin: 0;
-}
-.container {
-    max-width: 1800px;
+    border-radius: 7.5px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
 }
-a {
-    color: lightyellow;
+footer nav ul li{
+  display: inline;
+    margin: 0 15px;
+    padding: 10px 10px;
+    border-radius: 15px;
 }
-a:hover {
-    text-decoration: underline;
+
+img{
+    max-width: 100%;
+    height: auto;
 }
-li {
-    display: grid;
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style-type: none;
-    padding-left: 20px;
-    border: 5px double darkorange;
-    border-radius: 8px;
-    background-color: rgba(255, 140, 0, 0.2);
-    
+h1{
+    color: #0a4fe2;
+    text-align: center;
 }
-li:hover {
-    background-color: rgba(255, 140, 0, 0.4);
-    box-shadow: 0 6px 12px rgba(83, 21, 21, 0.2);
+h2{
+    color: #0a4fe2;
+    border-bottom: 2px solid #0a4fe2;
+    padding-bottom: 5px;
+    text-align: center;
 }
