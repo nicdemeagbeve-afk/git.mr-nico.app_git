@@ -143,14 +143,14 @@ h2{
 .project a:hover{
     text-decoration: underline;
 }
-@media (max-width: 1200px) { .intro-content img { width: 400px; height: auto; } }
-@media (max-width: 768px) { .intro-content img { width: 250px; height: auto; } }
-@media (max-width: 480px) { .intro-content img { width: 150px; height: auto; } }
 /* Animation for sections */
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 1200px) { .intro-content img { width: 400px; height: auto; } }
+@media (max-width: 768px) { .intro-content img { width: 250px; height: auto; } }
+@media (max-width: 480px) { .intro-content img { width: 150px; height: auto; } }
 @media (max-width: 600px) {
   header ul {
     display: flex;
