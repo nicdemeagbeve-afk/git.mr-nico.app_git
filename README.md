@@ -28,3 +28,7 @@ Initialisation et structure compléte du html et ajout du favicon
 ## Style du site 
 
 Ajout de couleur gold + disposition du site
+
+## Présentation du Site :
+Ce projet est en faite un portfolio, mon propre portfolio personnel coder avec du Html, Css et un peu de Js
+Bien quelle ne soit pas totalement Professionnel c'est un début et j'en suis fière
