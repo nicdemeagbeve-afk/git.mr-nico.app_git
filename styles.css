@@ -1,62 +1,141 @@
-/* styles.css */
+/* ==============================
+   STYLES GÉNÉRAUX
+   ============================== */
+
+/* Active un défilement fluide pour les liens internes (ex: #about) */
 html {
   scroll-behavior: smooth;
 }
-body{
-     font-family: 'Poppins', Arial, sans-serif;
-    line-height: 1.6;
+
+/* Styles généraux du corps de page */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Police principale */
+    line-height: 1.6; /* Hauteur des lignes pour lisibilité */
     margin: 0;
     padding: 0;
-    background-color: #031f47; 
-    color: #ffffff;
+    background-color: #031f47; /* Fond bleu foncé */
+    color: #000000; /* Texte en blanc */
 }
-section {
-  padding: 40px 20px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-header{
-    background-color: #333;
-    color: white;
-    padding: 9.5px 0;
-    margin: 10px 0;
-    text-align: center;
-    position: sticky;
+
+/* ==============================
+   EN-TÊTE (HEADER)
+   ============================== */
+header {
+    background-color: #333; /* Fond gris foncé */
+    color: white; /* Texte blanc */
+    padding: 9.5px 0; /* Espace intérieur vertical */
+    margin: 10px 0; /* Espace extérieur */
+    text-align: center; /* Centrage du texte */
+    position: static; /* Position normale */
+    width: 100%; /* Prend toute la largeur */
     top: 0;
-    z-index: 1000;
-    border-radius: 7.5px;
+    border-radius: 7.5px; /* Coins arrondis */
 }
-h1{
+
+/* Titre principal dans le header */
+h1 {
     margin: 0;
 }
-nav ul{
+
+/* Liste de navigation : suppression des puces et marges */
+nav ul {
     list-style-type: none;
     padding: 0;
-  
 }
-header ul li{
-    display: inline;
-  /*  margin: 0px 25px 0px 25px;
-    padding: 15px 20px 10px 50px; */
-    margin: 0px 15px 0px 15px;
+
+/* Éléments de la liste de navigation */
+header ul li {
+    display: inline; /* Tous sur une ligne */
+    margin: 0px 15px; /* Espacement horizontal */
     padding: 10px 10px;
     border-left: #ffffff solid 1px;
     border-right: #ffffff solid 1px;
     border-radius: 5px;
+    box-shadow: #666161 0px 0px 10px; /* Ombre douce */
+}
 
+/* Effet survol pour les éléments du menu */
+header ul :hover {
+    background-color: #0a1fdb; /* Fond bleu clair */
+    transition: background-color 0.3s ease; /* Transition fluide */
+    cursor: pointer; /* Curseur pointeur */
+    box-shadow: #666161 0px 0px 10px; /* Ombre douce */
+    border-radius: 15px;
+    color: rgb(50, 182, 205);
 }
-header ul :hover{
-    background-color: #0a1fdb;
-}
-nav ul li a{
+
+/* Liens du menu */
+nav ul li a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Supprime le soulignement */
 }
-section{
-    padding: 20px;
+
+/* ==============================
+   ANIMATION D'APPARITION DES SECTIONS
+   ============================== */
+section {
+  padding: 40px 20px; /* Espacement intérieur */
+  opacity: 0; /* Caché au départ */
+  transform: translateY(30px); /* Décalé vers le bas */
+  transition: all 0.6s ease; /* Animation fluide d'apparition */
 }
-footer{
+
+/* Quand la section devient visible à l’écran */
+section.visible {
+  opacity: 1; /* Devient visible */
+  transform: translateY(0); /* Remonte à sa position normale */
+}
+
+/* ==============================
+   MISE EN LIGNE DES DIV DANS LES SECTIONS
+   ============================== */
+
+/* Chaque section devient un conteneur flexible */
+section {
+  display: flex;
+  flex-wrap: wrap; /* Permet le retour à la ligne si l’espace est insuffisant */
+  gap: 15px;       /* Espacement entre les div */
+  justify-content: center; /* Centre horizontalement les div */
+  align-items: stretch;     /* Étire les div pour qu'elles aient la même hauteur */
+}
+
+/* Paramètres des div à l'intérieur des sections */
+section > div {
+  flex: 1 1 450px; /* Largeur minimale de 450px, s’adapte dynamiquement */
+  box-sizing: border-box;
+  text-align: center; /* Centre le texte */
+}
+section > div:hover {
+  transform: scale(1.02); /* Légère augmentation de taille au survol */
+  transition: transform 0.3s ease; /* Transition fluide */
+  cursor: pointer; /* Curseur pointeur */
+    box-shadow: #666161 0px 0px 10px; /* Ombre douce */
+    border-radius: 15px;
+    background-color: #0a1fdb; /* Fond bleu clair */
+    color: rgb(255, 255, 255);
+}
+
+/* Style général appliqué à tous les div dans les sections */
+section > div {
+  border: #0a1fdb solid 1px; /* Bordure bleue */
+  padding: 10px;
+  border-radius: 7.5px;
+  box-shadow: #666161 0px 0px 10px; /* Ombre douce */
+  background-color: #8bafdf; /* Fond bleu clair */
+  margin: 10px;
+}
+div {
+    font-size: 1.05em; /* Taille de police légèrement augmentée */
+    line-height: 1.4; /* Hauteur de ligne pour lisibilité */
+}
+div :hover {
+    color: rgb(255, 255, 255);
+}
+
+/* ==============================
+   PIED DE PAGE (FOOTER)
+   ============================== */
+footer {
     background-color: #333;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -67,28 +146,71 @@ footer{
     border-radius: 7.5px;
     margin: auto;
 }
-footer nav ul li{
-  display: inline;
+
+/* Liens du footer affichés en ligne */
+footer nav ul li {
+    display: inline;
     margin: 0 15px;
     padding: 10px 10px;
     border-radius: 15px;
 }
 
-img{
+/* ==============================
+   IMAGES ET TITRES
+   ============================== */
+
+/* Les images ne dépassent jamais leur conteneur */
+img {
     max-width: 100%;
     height: auto;
 }
-h1{
-    color: #0a4fe2;
+
+/* Titres principaux */
+h1 {
+    color: #0a4fe2; /* Bleu vif */
     text-align: center;
 }
-h2{
+
+/* Sous-titres */
+h2 {
     color: #0a4fe2;
-    border-bottom: 2px solid #0a4fe2;
+    border-bottom: 2px solid #0a4fe2; /* Ligne bleue sous le titre */
     padding-bottom: 5px;
     text-align: center;
+    margin-bottom: 20px;
+    justify-content: center;
 }
-.container{
+
+/* Titres de niveau 3 */
+h3 {
+    color: #0a4fe2;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* ==============================
+   EXCEPTIONS (Sections spéciales)
+   ============================== */
+
+/* Empêche #intro et #contact d’hériter du flex global */
+#intro, #contact {
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+#intro img {
+    width: 500px;
+    height: auto;
+    border-radius: 75%;
+    border: 5px solid #0a4fe2;
+    box-shadow: #666161 0px 0px 10px; /* Ombre douce */
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   CONTENEUR PRINCIPAL
+   ============================== */
+.container {
     max-width: 1200px;
     margin: 45px auto;
     padding: 20px;
@@ -96,61 +218,71 @@ h2{
     background-color: #9bb1ce;
     border-radius: 10px;
 }
-.about{
+
+/* Section "à propos" */
+.about {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
-.profile-pic{
-    border-radius: 50%;
+
+/* Image de profil */
+.profile-pic {
+    border-radius: 75%;
     border: 5px solid #0a4fe2;
 }
-.intro-content{
+
+/* Bloc de présentation */
+.intro-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #9bb1ce;
 }
-.intro-content h2{
+
+/* Espacement entre l’image et le titre */
+.intro-content h2 {
     margin-top: 15px;
 }
-.intro-content p{
+
+/* Texte d’introduction */
+.intro-content p {
     font-size: 1.2em;
     text-align: center;
     max-width: 600px;
 }
-.projects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+
+
+/* ==============================
+   MEDIA QUERIES (Adaptation mobile)
+   ============================== */
+
+/* Grand écran : réduit légèrement l’image */
+@media (max-width: 1200px) {
+  .intro-content img {
+    width: 400px;
+    height: auto;
+  }
 }
-.project{
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .intro-content img {
+    width: 250px;
+    height: auto;
+  }
 }
-.project h3{
-    margin-top: 0;
+
+/* Téléphones */
+@media (max-width: 480px) {
+  .intro-content img {
+    width: 150px;
+    height: auto;
+  }
 }
-.project p{
-    font-size: 1em;
-}
-.project a{
-    color: #0a4fe2;
-    text-decoration: none;
-}
-.project a:hover{
-    text-decoration: underline;
-}
-/* Animation for sections */
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-@media (max-width: 1200px) { .intro-content img { width: 400px; height: auto; } }
-@media (max-width: 768px) { .intro-content img { width: 250px; height: auto; } }
-@media (max-width: 480px) { .intro-content img { width: 150px; height: auto; } }
+
+/* Menu mobile : passe la navigation en colonne */
 @media (max-width: 600px) {
   header ul {
     display: flex;
