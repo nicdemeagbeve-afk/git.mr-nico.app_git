@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Confirmez votre inscription sur Miabesite</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333;">
+
+    <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #dddddd; border-radius: 8px;">
+        
+        <h2 style="color: #007bff; text-align: center;">Bienvenue sur Miabesite !</h2>
+        
+        <p>Bonjour,</p>
+
+        <p>Merci de votre inscription sur Miabesite. Pour finaliser la création de votre compte et assurer la sécurité de vos données, veuillez utiliser le code de confirmation (OTP) ci-dessous :</p>
+
+        <div style="background-color: #f3f3f3; padding: 25px; text-align: center; border-radius: 5px; margin: 30px 0; border: 1px dashed #cccccc;">
+            <p style="font-size: 18px; color: #555555; margin-bottom: 5px;">Votre Code de Confirmation :</p>
+            <h1 style="font-size: 40px; color: #333333; margin: 0; font-weight: bold;">{{ .Token }}</h1>
+        </div>
+        
+        <p>Alternativement, vous pouvez cliquer sur le bouton ci-dessous pour confirmer directement :</p>
+        
+        <p style="text-align: center; margin: 30px 0;">
+            <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 12px 25px; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Confirmer mon Compte Miabesite
+            </a>
+        </p>
+
+        <p style="font-size: 14px; color: #666666; margin-top: 40px;">
+            Si vous n'avez pas tenté de vous inscrire sur Miabesite, veuillez ignorer cet e-mail.
+        </p>
+        
+        <p style="font-size: 14px; color: #666666;">
+            L'équipe de Miabesite
+        </p>
+
+    </div>
+
+</body>
+</html>
