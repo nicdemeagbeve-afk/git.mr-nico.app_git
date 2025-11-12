@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+        .header { 
+            text-align: center; 
+            background: #10B981; 
+            color: white; 
+            padding: 25px; 
+            border-radius: 10px 10px 0 0;
+        }
+        .content { 
+            background: #f9f9f9; 
+            padding: 25px; 
+            border-radius: 0 0 10px 10px;
+        }
+        .button { 
+            display: block; 
+            width: 250px; 
+            margin: 25px auto; 
+            padding: 14px 28px; 
+            background: #10B981; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .footer { 
+            text-align: center; 
+            margin-top: 25px; 
+            font-size: 12px; 
+            color: #6B7280;
+        }
+        .welcome-box {
+            background: #D1FAE5;
+            border: 2px solid #10B981;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+        }
+        .feature-icon {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .countdown {
+            background: #FEF3C7;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bienvenue sur Miabesite ! 🎉</h1>
+        <p>Votre aventure commence ici</p>
+    </div>
+    
+    <div class="content">
+        <div class="welcome-box">
+            <p style="margin: 0; font-size: 18px; font-weight: bold;">
+                Félicitations ! Votre compte a été créé avec succès.
+            </p>
+        </div>
+        
+        <p>Bonjour et bienvenue dans la communauté Miabesite !</p>
+        
+        <p>Nous sommes ravis de vous compter parmi nous. Pour activer votre compte et profiter de toutes nos fonctionnalités, veuillez confirmer votre adresse email :</p>
+        
+        <a href="{{ .ConfirmationURL }}" class="button">Confirmer mon adresse email</a>
+        
+        <div class="countdown">
+            <strong>⏰ Lien valable 24 heures</strong>
+            <p style="margin: 5px 0 0 0;">Confirmez rapidement pour ne pas perdre l'accès à votre compte</p>
+        </div>
+
+        <p><strong>Découvrez ce qui vous attend :</strong></p>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <div>Accès immédiat</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div>Compte sécurisé</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💫</div>
+                <div>Fonctionnalités premium</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌟</div>
+                <div>Support dédié</div>
+            </div>
+        </div>
+        
+        <p>Une fois votre email confirmé, vous pourrez :</p>
+        <ul>
+            <li>Accéder à votre espace personnel</li>
+            <li>Profiter de toutes les fonctionnalités</li>
+            <li>Personnaliser votre profil</li>
+            <li>Rejoindre notre communauté</li>
+        </ul>
+        
+        <p><em>Si vous n'êtes pas à l'origine de cette inscription, vous pouvez ignorer cet email en toute sécurité.</em></p>
+        
+        <div class="footer">
+            <p>Email de confirmation envoyé à : <strong>{{ .Email }}</strong></p>
+            <p>À très vite sur Miabesite !</p>
+            <p>&copy; 2024 Miabesite. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>

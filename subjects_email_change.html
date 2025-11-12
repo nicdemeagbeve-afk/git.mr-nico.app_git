@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+        .header { 
+            text-align: center; 
+            background: #F59E0B; 
+            color: white; 
+            padding: 20px; 
+            border-radius: 8px 8px 0 0;
+        }
+        .content { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 0 0 8px 8px;
+        }
+        .button { 
+            display: block; 
+            width: 240px; 
+            margin: 20px auto; 
+            padding: 12px 24px; 
+            background: #F59E0B; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            text-align: center;
+            font-weight: bold;
+        }
+        .footer { 
+            text-align: center; 
+            margin-top: 20px; 
+            font-size: 12px; 
+            color: #6B7280;
+        }
+        .change-summary {
+            background: #FFFBEB;
+            border: 1px solid #F59E0B;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .security-alert {
+            background: #FEF3C7;
+            border-left: 4px solid #D97706;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .email-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .email-item {
+            flex: 1;
+            padding: 10px;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #F59E0B;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Changement d'adresse email</h1>
+    </div>
+    
+    <div class="content">
+        <div class="change-summary">
+            <p><strong>🔄 Modification de l'adresse email de votre compte</strong></p>
+            <p>Une demande de changement d'email a été initiée pour votre compte Miabesite.</p>
+        </div>
+        
+        <p>Bonjour,</p>
+        
+        <p>Vous avez demandé à modifier l'adresse email associée à votre compte Miabesite.</p>
+        
+        <div class="email-comparison">
+            <div class="email-item">
+                <strong>Ancien email :</strong><br>
+                <span style="color: #6B7280;">{{ .Email }}</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="email-item">
+                <strong>Nouvel email :</strong><br>
+                <span style="color: #059669;">{{ .NewEmail }}</span>
+            </div>
+        </div>
+        
+        <p>Pour confirmer ce changement et sécuriser votre compte, cliquez sur le bouton ci-dessous :</p>
+        
+        <a href="{{ .ConfirmationURL }}" class="button">Confirmer le changement d'email</a>
+        
+        <div class="security-alert">
+            <p><strong>⚠️ Vérification de sécurité</strong></p>
+            <p>Cette confirmation est nécessaire pour garantir que vous êtes bien à l'origine de cette modification.</p>
+        </div>
+        
+        <p><strong>Validité :</strong> Ce lien de confirmation expirera dans <strong>1 heure</strong>.</p>
+        
+        <p><strong>Si vous n'êtes pas à l'origine de cette demande :</strong></p>
+        <ul>
+            <li>Ignorez immédiatement cet email</li>
+            <li>Vérifiez la sécurité de votre compte</li>
+            <li>Contactez notre support si nécessaire</li>
+            <li>Votre adresse email actuelle reste inchangée</li>
+        </ul>
+        
+        <div class="footer">
+            <p>Demande de modification pour le compte : {{ .Email }}</p>
+            <p>&copy; 2024 Miabesite. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>
